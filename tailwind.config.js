@@ -5,6 +5,16 @@ module.exports = {
   ],
   theme: {
     extend: {display: ['responsive', 'group-hover', 'group-focus', 'focus-within', 'hover', 'focus']},
+    colors: {
+      'mypurple': '#7957cc',
+      'myblack': '#151515',
+      'mygray': '#d9d9d9',
+      'myblackone': '#111111',
+      'mybg': '#151515',
+      'mywhite': '#ffffff',
+
+
+    }
   },
   variants: {},
   plugins: [],
