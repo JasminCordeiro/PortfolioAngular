@@ -1,11 +1,11 @@
-<header id="home" class="flex items-center justify-between bg-myblackone px-4 py-2 text-white">
+<header id="home" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between bg-myblackone px-4 py-2 text-white ">
   <div class="flex items-center">
     <div>
       <h3 class="logo mr-4 font-bold text-lg">JassCordeiro.dev</h3>
     </div>
   </div>
 
-  <nav class="hidden md:flex items-center "> <!-- Hide on small screens -->
+  <nav class="hidden md:flex items-center"> <!-- Hide on small screens -->
     <ul class="flex justify-center">
       <li class="wt-28 h-12 flex justify-center items-center nav-item hover:bg-mypurple rounded-lg cursor-pointer"><a href="#home" class="w-full h-full flex justify-center items-center">Home</a></li>
       <li class="w-32 h-12 flex justify-center items-center nav-item hover:bg-mypurple rounded-lg cursor-pointer"><a href="#sobreMim" class="w-full h-full flex justify-center items-center">Sobre mim</a></li>
@@ -17,7 +17,7 @@
 
   <!-- Menu for small screens -->
   <div class="md:hidden">
-    <button (click)="toggleMobileMenu()"  class="text-white hover:text-gray-400 focus:outline-none">
+    <button (click)="toggleMobileMenu()" class="text-white hover:text-gray-400 focus:outline-none">
       <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -25,18 +25,17 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div *ngIf="mobileMenuVisible" class="md:hidden border ">
+  <div *ngIf="mobileMenuVisible" class="md:hidden border">
     <div class="fixed inset-0 z-50  bg-opacity-75 flex justify-center items-center text-center">
       <div class="bg-mybg rounded-lg p-4 border">
         <ul class="flex flex-col">
-          <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2"><a href="#">Home</a></li>
-          <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2"><a href="#sobreMim">Sobre mim</a></li>
-          <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2"><a href="#skills">Skills</a></li>
-          <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2"><a href="#projetos">Projetos</a></li>
-          <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2"><a href="#contatos">Contatos</a></li>
-      </ul>
+          <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2" (click)="toggleMobileMenu()"><a href="#">Home</a></li>
+          <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2" (click)="toggleMobileMenu()"><a href="#sobreMim">Sobre mim</a></li>
+          <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2" (click)="toggleMobileMenu()"><a href="#skills">Skills</a></li>
+          <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2" (click)="toggleMobileMenu()"><a href="#projetos">Projetos</a></li>
+          <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2" (click)="toggleMobileMenu()"><a href="#contatos">Contatos</a></li>
+        </ul>
+      </div>
     </div>
   </div>
-  </div>
 </header>
-
