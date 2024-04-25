@@ -14,6 +14,10 @@ module.exports = {
       'mywhite': '#ffffff',
 
 
+    },
+    fontFamily:{
+      'sans': ['Roboto', 'sans-serif'],
+      'custom': ['MyCustomFont', 'sans-serif'],
     }
   },
   variants: {},

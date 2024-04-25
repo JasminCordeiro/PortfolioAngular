@@ -14,13 +14,24 @@ export class HeaderComponent implements OnInit{
   mobileMenuActive = false;
     constructor(){}
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+      // Adiciona um evento de clique a todos os itens do menu
+      document.querySelectorAll('.nav-item').forEach(item => {
+        item.addEventListener('click', () => {
+          // Fecha o menu ao clicar em um item
+          this.closeMobileMenu();
+        });
+      });
+    }
 
     toggleMobileMenu(): void {
       console.log('Menu toggled');
       this.mobileMenuVisible = !this.mobileMenuVisible;
       this.mobileMenuActive = this.mobileMenuVisible;
-
+    }
+    closeMobileMenu(): void {
+      this.mobileMenuVisible = false;
+      this.mobileMenuActive = false;
     }
 
 }

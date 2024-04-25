@@ -1,5 +1,5 @@
-<div class="text-center">
-  <h1 class="text-3xl font-bold">Projetos</h1>
+<div class=" text-center">
+  <h1 id="projetos"class="text-3xl font-bold">Projetos</h1>
 
   <!-- Conteúdo do carrossel -->
   <div class="flex flex-col md:flex-row mt-4 justify-between items-center">
@@ -31,7 +31,17 @@
 
   <!-- Botões de navegação -->
   <div class="flex justify-between items-center mt-4">
-    <button #prevButton class="flex justify-center items-center w-12 h-6 bg-mypurple text-white rounded-lg m-2"><<</button>
-    <button #nextButton class="flex justify-center items-center w-12 h-6 bg-mypurple text-white rounded-lg m-2">>></button>
+    <button #prevButton class="flex justify-center items-center w-12 h-6 bg-mypurple text-white rounded-lg m-2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <button #nextButton class="flex justify-center items-center w-12 h-6 bg-mypurple text-white rounded-lg m-2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+
   </div>
 </div>
