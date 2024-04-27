@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./src/**/*.{html,ts}",
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend: {display: ['responsive', 'group-hover', 'group-focus', 'focus-within', 'hover', 'focus']},
@@ -21,5 +22,5 @@ module.exports = {
     }
   },
   variants: {},
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 }
