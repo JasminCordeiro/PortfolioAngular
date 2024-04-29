@@ -7,7 +7,7 @@
 
   <nav class="hidden md:flex items-center"> <!-- Hide on small screens -->
     <ul class="flex justify-center">
-      <li class="wt-28 h-12 flex justify-center items-center nav-item hover:bg-mypurple rounded-lg cursor-pointer"><a href="#home" class="w-full h-full flex justify-center items-center">Home</a></li>
+      <!-- <li class="wt-28 h-12 flex justify-center items-center nav-item hover:bg-mypurple rounded-lg cursor-pointer"><a href="#home" class="w-full h-full flex justify-center items-center">Home</a></li> -->
       <li class="w-32 h-12 flex justify-center items-center nav-item hover:bg-mypurple rounded-lg cursor-pointer"><a href="#sobreMim" class="w-full h-full flex justify-center items-center">Sobre mim</a></li>
       <li class="wt-28 h-12 flex justify-center items-center nav-item hover:bg-mypurple rounded-lg cursor-pointer"><a href="#skills" class="w-full h-full flex justify-center items-center">Skills</a></li>
       <li class="wt-28 h-12 flex justify-center items-center nav-item hover:bg-mypurple rounded-lg cursor-pointer"><a href="#projetos" class="w-full h-full flex justify-center items-center">Projetos</a></li>
@@ -27,10 +27,10 @@
 
   <!-- Mobile Menu -->
   <div *ngIf="mobileMenuVisible" class="md:hidden border">
-    <div class="fixed inset-0 z-50  bg-opacity-75 flex justify-center items-center text-center">
+    <div class="fixed inset-0 z-50 bg-opacity-75 flex justify-center items-center text-center">
       <div class="bg-mybg rounded-lg p-4 border">
         <ul class="flex flex-col">
-          <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2" (click)="toggleMobileMenu()"><a href="#">Home</a></li>
+          <!-- <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2" (click)="toggleMobileMenu()"><a href="#">Home</a></li> -->
           <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2" (click)="toggleMobileMenu()"><a href="#sobreMim">Sobre mim</a></li>
           <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2" (click)="toggleMobileMenu()"><a href="#skills">Skills</a></li>
           <li class="nav-item hover:bg-mypurple rounded-lg cursor-pointer mb-2" (click)="toggleMobileMenu()"><a href="#projetos">Projetos</a></li>

@@ -10,6 +10,8 @@ module.exports = {
       'mypurple': '#7957cc',
       'myblack': '#151515',
       'mygray': '#d9d9d9',
+      'mygray2': '#212121',
+      'mygray3': '#313131',
       'myblackone': '#111111',
       'mybg': '#151515',
       'mywhite': '#ffffff',
