@@ -15,6 +15,8 @@ module.exports = {
       'myblackone': '#111111',
       'mybg': '#151515',
       'mywhite': '#ffffff',
+      'mypurple-dark': '#5b4199',
+
 
 
     },
