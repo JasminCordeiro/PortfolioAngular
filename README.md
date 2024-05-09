@@ -1,32 +1,34 @@
-# Portfolio
+# Portfolio Angular + Tailwind 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.1.
+Este é um projeto de portfólio pessoal desenvolvido utilizando Angular, Tailwind CSS e hospedado na plataforma Vercel.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologias Utilizadas:
 
-## Code scaffolding
+- **Angular:** Um framework de desenvolvimento de aplicações web desenvolvido pela equipe do Google. Angular facilita a criação de aplicativos web dinâmicos e responsivos.
+- **Tailwind CSS:** Um framework de CSS utilitário que permite criar designs personalizados com rapidez, utilizando classes pré-definidas.
+- **Vercel:** Uma plataforma de hospedagem que simplifica o processo de implantação e gerenciamento de aplicativos web, oferecendo escalabilidade e desempenho.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## Finalidade:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+O objetivo deste projeto é apresentar meu portfólio pessoal, destacando minhas habilidades, experiência e projetos anteriores. Este portfólio serve como uma vitrine do meu trabalho para potenciais empregadores, clientes e colaboradores.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Funcionalidades:
 
-## Running end-to-end tests
+- Exibição de informações pessoais e profissionais.
+- Exibição de projetos anteriores, com detalhes sobre tecnologias utilizadas e contribuições feitas.
+- Seção de contato para facilitar a comunicação com visitantes interessados.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
+
+## Autor:
+
+[Jasmin Cordeiro] 
 
 
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-## Figma Protótipo model 
-https://www.figma.com/file/JnX7TcRSmBx8whzlNqlwzB/Untitled?type=design&node-id=0-1&mode=design&t=0RnOGPuAyBP9raan-0
+## Link do projeto: https://jasmincordeiro.vercel.app/
