@@ -30,6 +30,6 @@ O objetivo deste projeto é apresentar meu portfólio pessoal, destacando minhas
 
 [Jasmin Cordeiro] 
 
-Fique a vontade para deuxar o seu feedback 😁
+Fique a vontade para deixar o seu feedback 😁
 
 ## Link do projeto: https://jasmincordeiro.vercel.app/
