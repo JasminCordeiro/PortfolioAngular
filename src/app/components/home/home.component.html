@@ -1,19 +1,42 @@
 
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 
 
-<!-- header com indicador
- <aside class="fixed flex-col  h-full left-0 z-40">
+<!-- header com indicador-->
+  <aside class="fixed flex flex-col justify-center items-center h-full left-0 z-40">
 
-  <span class="flex w-3 h-3 m-2 me-3 bg-gray-200 rounded-full"></span>
-  <span class="flex w-3 h-3 m-2 me-3 bg-gray-200 rounded-full"></span>
-  <span class="flex w-3 h-3 m-2 me-3 bg-gray-200 rounded-full"></span>
-  <span class="flex w-3 h-3 m-2 me-3 bg-gray-200 rounded-full"></span>
+    <div>
+      <a data-tooltip-target="tooltip-right1" data-tooltip-placement="right" class="flex w-3 h-3 my-2 md:mx-1 bg-mygray2 border border-mygray3 hover:border-mypurple rounded-full" href="#sobreMim"></a>
+      <div id="tooltip-right1" role="tooltip" class="absolute z-10 invisible inline-block text-nowrap px-2 py-1 text-xs font-medium text-white bg-mygray3 rounded-lg border border-mypurple shadow-sm opacity-0 tooltip">
+      Sobre mim
+      <!-- <div class="tooltip-arrow" data-popper-arrow></div> -->
+      </div>
+    </div>
+    <div>
+      <a data-tooltip-target="tooltip-right2" data-tooltip-placement="right" class="flex w-3 h-3  my-2 md:mx-1 bg-mygray2 border border-mygray3 hover:border-mypurple rounded-full" href="#skills"></a>
+      <div id="tooltip-right2" role="tooltip" class="absolute z-10 invisible inline-block text-nowrap px-2 py-1 text-xs font-medium text-white bg-mygray3 rounded-lg border border-mypurple  shadow-sm opacity-0 tooltip">
+        Skills
+      <!-- <div class="tooltip-arrow" data-popper-arrow></div> -->
+      </div>
+    </div>
+    <div>
+      <a data-tooltip-target="tooltip-right3" data-tooltip-placement="right" class="flex w-3 h-3  my-2 md:mx-1 bg-mygray2 border border-mygray3 hover:border-mypurple rounded-full" href="#projetos"></a>
+      <div id="tooltip-right3" role="tooltip" class="absolute z-10 invisible inline-block text-nowrap px-2 py-1 text-xs font-medium text-white bg-mygray3 rounded-lg border border-mypurple shadow-sm opacity-0 tooltip">
+        Projetos
+      <!-- <div class="tooltip-arrow" data-popper-arrow></div> -->
+      </div>
+    </div>
+    <div>
+      <a data-tooltip-target="tooltip-right4" data-tooltip-placement="right" class="flex w-3 h-3  my-2 md:mx-1 bg-mygray2 border border-mygray3 hover:border-mypurple rounded-full" href="#contatos"></a>
+      <div id="tooltip-right4" role="tooltip" class="absolute z-10 invisible inline-block text-nowrap px-2 py-1 text-xs font-medium text-white bg-mygray3 rounded-lg border border-mypurple shadow-sm opacity-0 tooltip">
+        Contatos
+      <!-- <div class="tooltip-arrow" data-popper-arrow></div> -->
+      </div>
+    </div>
 
+  </aside>
 
-  </aside> -->
-
-<main class="flex flex-col gap-2 text-mywhite md:m-16  sm:m-4">
+<main class="flex flex-col gap-2 text-mywhite sm:m-4">
 
 
   <div id="sobreMim" class="grid grid-cols-1 sm:grid-cols-2 p-4 md:mb-12   ">
@@ -27,7 +50,7 @@
     <div class="text-center">
         <h1  class="text-3xl font-bold">Jasmin Cordeiro</h1>
 
-        <h3 class="text-center">Fullstack Developer Junior</h3>
+        <h3 class="text-center text-sm">Fullstack Developer Junior</h3>
         <p class="p-2">Olá! Sou <strong class="text-mypurple">Jasmin Cordeiro</strong>, desenvolvedora fullstack apaixonada por criar soluções inovadoras. Estou cursando Sistemas de Informação, e tenho experiência em HTML,CSS, JS, Angular, Php  e muito mais. Estou sempre em busca de desafios estimulantes e pronta para contribuir em projetos empolgantes. Vamos criar juntos o futuro da tecnologia!</p>
         <a target="_blank" href="./assets/Jasmin-Cordeiro.pdf" download class="m-3 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-mypurple rounded-lg hover:bg-mypurple-dark focus:ring-2 focus:outline-none focus:ring-mygray ">
           <b>Currículo</b>
