@@ -21,8 +21,7 @@ module.exports = {
 
     },
     fontFamily:{
-      'sans': ['Roboto', 'sans-serif'],
-      'custom': ['MyCustomFont', 'sans-serif'],
+      sans: ['Inter', 'sans-serif'],
     }
   },
   variants: {},

@@ -15,7 +15,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   @ViewChildren('carouselItem') carouselItemsRefs!: QueryList<ElementRef<HTMLDivElement>>;
 
   private currentIndex = 0;
-  private itemsPerPage = 3;
+  private itemsPerPage = 1;
 
   constructor() { }
 
@@ -53,7 +53,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
     if (window.innerWidth <= 768) { // Para telas menores ou iguais a 768 pixels de largura (mobile)
       this.itemsPerPage = 1; // Apenas um item por página no mobile
     } else {
-      this.itemsPerPage = 3; // Três itens por página para telas maiores que 768 pixels de largura (desktop)
+      this.itemsPerPage = 1; // Três itens por página para telas maiores que 768 pixels de largura (desktop)
     }
     this.updateVisibility(); // Atualiza a visibilidade dos itens após a alteração do número de itens por página
   }

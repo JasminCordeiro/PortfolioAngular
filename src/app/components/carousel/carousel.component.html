@@ -1,44 +1,33 @@
 <div class=" text-center">
-  <h1 id="projetos"  class="text-3xl font-bold">Projetos</h1>
-
   <!-- Conteúdo do carrossel -->
-  <div class="flex flex-col md:flex-row mt-4 justify-between items-center">
+  <div class="flex flex-col md:flex-row mt-4 justify-center items-center w-1/2 md:w-auto">
 
-    <div #carouselItem class="w-full md:w-auto">
-      <div class="w-80 h-60 bg-mygray m-auto text-myblack ">1</div>
+    <div #carouselItem class="">
+      <img class="flex justify-center rounded-lg " width="336" Src="./assets/PC-yourlinkhubdark.png" alt="" />
+    </div>
+    <div #carouselItem class="">
+      <img class="flex justify-center md:w-102 md:h-72 w-29 h-40 rounded-lg " Src="./assets/yourlinkhubdark.png" alt="" />
+    </div>
+    <div #carouselItem class="">
+      <img class="flex justify-center md:w-102 md:h-72 w-29 h-40 rounded-lg " Src="./assets/yourlinkhublight.png" alt="" />
+    </div>
 
+    <div #carouselItem class="">
+      <img class="flex justify-center md:w-50 md:h-30 rounded-lg " Src="./assets/PC-yourlinkhublight.png" alt="" />
+    </div>
 
-    </div>
-    <div #carouselItem class="w-full md:w-auto">
-      <div class="w-80 h-60 bg-mygray m-auto text-myblack">2</div>
-    </div>
-    <div #carouselItem class="w-full md:w-auto">
-      <div class="w-80 h-60 bg-mygray m-auto text-myblack">3</div>
-    </div>
-    <div #carouselItem class="w-full md:w-auto">
-      <div class="w-80 h-60 bg-mygray m-auto text-myblack">4</div>
-    </div>
-    <div #carouselItem class="w-full md:w-auto">
-      <div class="w-80 h-60 bg-mygray m-auto text-myblack">5</div>
-    </div>
-    <div #carouselItem class="w-full md:w-auto">
-      <div class="w-80 h-60 bg-mygray m-auto text-myblack">6</div>
-    </div>
-    <div #carouselItem class="w-full md:w-auto">
-      <div class="w-80 h-60 bg-mygray m-auto text-myblack">7</div>
-    </div>
 
 
   </div>
 
   <!-- Botões de navegação -->
-  <div class="flex justify-between items-center mt-4">
-    <button #prevButton class="flex justify-center items-center w-12 h-6 bg-mypurple text-white rounded-lg m-2">
+  <div class="flex justify-between items-center">
+    <button #prevButton class="flex justify-center items-center w-8  text-white rounded-lg">
       <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
       </svg>
     </button>
-    <button #nextButton class="flex justify-center items-center w-12 h-6 bg-mypurple text-white rounded-lg m-2">
+    <button #nextButton class="flex justify-center items-center w-8  text-white rounded-lg">
       <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
       </svg>
