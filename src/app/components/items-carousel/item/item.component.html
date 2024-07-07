@@ -1,0 +1,49 @@
+<div class="absolute w-full h-full flex justify-center items-center ">
+  <div class="dark:bg-mygray2 bg-white border dark:border-mygray3 rounded-lg shadow flex justify-center items-center md:flex-row flex-col " data-carousel-item>
+    <div class="grid grid-cols-2">
+      <div #carouselItem class="">
+        <img class="flex justify-center md:w-102 md:h-72 w-29 h-40 rounded-lg mr-4 " [src]='"./assets/yourlinkhubdark.png" + img' alt="" />
+      </div>
+      <div #carouselItem class="">
+        <img class="flex justify-center md:w-102 md:h-72 w-29 h-40 rounded-lg mr-4 " [src]='"./assets/yourlinkhubdark.png" + img' alt="" />
+      </div>
+    </div>
+    <div class="p-5 flex flex-col justify-center items-center">
+      <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 text-white">{{label}}</h5>
+      <div class="grid grid-cols-2 gap-3">
+      <a class="flex justify-center items-center flex-col p-4 bg-white dark:bg-mygray2 bg-gray-100 border dark:border-mygray3 rounded-lg shadow  bg-mygray2 transition-transform duration-500 transform hover:scale-110 hover:border-mypurple dark:hover:border-mypurple">
+        <img *ngIf="type == 'html'" src="../../../../assets/vectors/html.svg" alt="">
+      </a>
+      <a class="flex justify-center items-center flex-col p-4 bg-white dark:bg-mygray2 bg-gray-100 border dark:border-mygray3 rounded-lg shadow  bg-mygray2 transition-transform duration-500 transform hover:scale-110 hover:border-mypurple dark:hover:border-mypurple">
+        <img *ngIf="type == 'css'" src="../../../../assets/vectors/css.svg" alt="">
+      </a>
+      <a class="flex justify-center items-center flex-col p-4 bg-white dark:bg-mygray2 bg-gray-100 border dark:border-mygray3 rounded-lg shadow  bg-mygray2 transition-transform duration-500 transform hover:scale-110 hover:border-mypurple dark:hover:border-mypurple">
+        <img *ngIf="type == 'javascript'" src="../../../../assets/vectors/javascript.svg" alt="">
+      </a>
+      <a class="flex justify-center items-center flex-col p-4 bg-white dark:bg-mygray2 bg-gray-100 border dark:border-mygray3 rounded-lg shadow  bg-mygray2 transition-transform duration-500 transform hover:scale-110 hover:border-mypurple dark:hover:border-mypurple">
+        <img *ngIf="type == 'angular'" src="../../../../assets/vectors/angular.svg" alt="">
+      </a>
+      <a class="flex justify-center items-center flex-col p-4 bg-white dark:bg-mygray2 bg-gray-100 border dark:border-mygray3 rounded-lg shadow  bg-mygray2 transition-transform duration-500 transform hover:scale-110 hover:border-mypurple dark:hover:border-mypurple">
+        <img *ngIf="type == 'php'" src="../../../../assets/vectors/php.svg" alt="">
+      </a>
+      <a class="flex justify-center items-center flex-col p-4 bg-white dark:bg-mygray2 bg-gray-100 border dark:border-mygray3 rounded-lg shadow  bg-mygray2 transition-transform duration-500 transform hover:scale-110 hover:border-mypurple dark:hover:border-mypurple">
+        <img *ngIf="type == 'java'" src="../../../../assets/vectors/java.svg" alt="">
+      </a>
+      <a class="flex justify-center items-center flex-col p-4 bg-white dark:bg-mygray2 bg-gray-100 border dark:border-mygray3 rounded-lg shadow  bg-mygray2 transition-transform duration-500 transform hover:scale-110 hover:border-mypurple dark:hover:border-mypurple">
+        <img *ngIf="type == 'python'" src="../../../../assets/vectors/python.svg" alt="">
+      </a>
+      <a class="flex justify-center items-center flex-col p-4 bg-white dark:bg-mygray2 bg-gray-100 border dark:border-mygray3 rounded-lg shadow  bg-mygray2 transition-transform duration-500 transform hover:scale-110 hover:border-mypurple dark:hover:border-mypurple">
+        <img *ngIf="type == 'tailwind'" src="../../../../assets/vectors/tailwind.svg" alt="">
+      </a>
+      <a class="flex justify-center items-center flex-col p-4 bg-white dark:bg-mygray2 bg-gray-100 border dark:border-mygray3 rounded-lg shadow  bg-mygray2 transition-transform duration-500 transform hover:scale-110 hover:border-mypurple dark:hover:border-mypurple">
+        <img *ngIf="type == 'git'" src="../../../../assets/vectors/git.svg" alt="">
+      </a>
+
+            </div>
+      <a target="_blank" href="https://yourlinkhub.vercel.app/" class=" m-4 md:m-5 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-mypurple rounded-lg hover:bg-mypurple-dark focus:ring-2 focus:outline-none focus:ring-mygray ">
+        <b>Ir para</b>
+        <img src="../../../../assets/vectors/goto.svg" alt="">
+      </a>
+    </div>
+  </div>
+</div>
