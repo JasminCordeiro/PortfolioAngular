@@ -30,9 +30,9 @@
     </div>
 </aside>
 
-<main class="font-sans flex flex-col gap-2 text-gray-800 dark:text-white sm:m-4">
+<main  id="sobreMim" class="font-sans flex flex-col gap-2 text-gray-800 dark:text-white sm:m-4">
   <app-theme-toggle class="flex justify-end "></app-theme-toggle>
-  <div id="sobreMim" class="grid grid-cols-1 sm:grid-cols-2 p-4 md:pb-16 md:pt-12">
+  <div  class="grid grid-cols-1 sm:grid-cols-2 p-4 md:pb-16 md:pt-12">
     <section class="flex justify-center items-center">
 
     <img  Src="./assets/file.jpg" class=" object-contain rounded-full w-56 md:w-80 mb-2" alt="..."  >
@@ -47,7 +47,7 @@
         <p class="p-3 text-justify">Desenvolvedora fullstack apaixonada por criar soluções inovadoras. Estou cursando Sistemas de Informação, e tenho experiência em HTML,CSS, JS, Angular, Php  e muito mais. Estou sempre em busca de desafios estimulantes e pronta para contribuir em projetos empolgantes. Vamos criar juntos o futuro da tecnologia!</p>
         <a target="_blank" href="./assets/Jasmin-Cordeiro.pdf" download class="m-3 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-mypurple-dark rounded-lg hover:bg-mypurple focus:ring-2 focus:outline-none focus:ring-mygray ">
           <b class="text-white">Currículo</b>
-          <svg  id="skills" class="m-1 w-4 h-4 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <svg class="m-1 w-4 h-4 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m14-4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
           </svg>
         </a>
@@ -55,7 +55,7 @@
   </div >
 </div>
 
-<h1 class="text-3xl text-center font-bold">Skills</h1>
+<h1 id="skills" class="text-3xl text-center font-bold">Skills</h1>
 <div class="p-4">
 <div class="grid grid-cols-3 gap-3 font-medium">
   <div *ngFor="let skill of skills; let i = index">
