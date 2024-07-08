@@ -10,15 +10,12 @@
   <app-theme-toggle class="flex justify-end "></app-theme-toggle>
   <div  class="grid grid-cols-1 sm:grid-cols-2 p-4 md:pb-16 md:pt-12">
     <section class="flex justify-center items-center">
-
-    <img  Src="./assets/file.jpg" class=" object-contain rounded-full w-56 md:w-80 mb-2" alt="..."  >
-
-  </section>
+        <img  Src="./assets/file.jpg" class=" object-contain rounded-full w-56 md:w-80 mb-2" alt="..."  >
+    </section>
 
   <div class="flex justify-start items-center">
     <div class="text-center">
         <h1  class="text-4xl font-bold py-1 "> Olá, sou a <b class="font-bold text-mypurple-dark">Jasmin Cordeiro</b></h1>
-
         <h3 class="text-center text-sm pb-1">Fullstack Developer Junior</h3>
         <p class="p-3 text-justify">Desenvolvedora fullstack apaixonada por criar soluções inovadoras. Estou cursando Sistemas de Informação, e tenho experiência em HTML,CSS, JS, Angular, Php  e muito mais. Estou sempre em busca de desafios estimulantes e pronta para contribuir em projetos empolgantes. Vamos criar juntos o futuro da tecnologia!</p>
         <a target="_blank" href="./assets/Jasmin-Cordeiro.pdf" download class="m-3 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-mypurple-dark rounded-lg hover:bg-mypurple focus:ring-2 focus:outline-none focus:ring-mygray ">
@@ -32,9 +29,9 @@
 </div>
 
   <h1 id="skills" class="text-3xl text-center font-bold">Skills</h1>
-  <div class="grid grid-cols-3 gap-3 font-medium p-4 ">
+  <div class="grid grid-cols-3 gap-3 font-medium p-4">
     <div *ngFor="let skill of skills; let i = index">
-      <app-skills [id]="i" [type]="skill.type" [label]="skill.label" ></app-skills>
+      <app-skills [id]="i" [type]="skill.type" [label]="skill.label" [progress]="skill.progress"></app-skills>
     </div>
   </div>
 
@@ -75,12 +72,11 @@
   <div class="flex justify-center items-center text-center w-full md:w-1/3">
     <div class="flex flex-row justify-between items-center border dark:border-mygray3 shadow dark:bg-mybg bg-gray-100 rounded-lg py-2 px-4  ">
       <div class="w-full">
-        <a href="https://github.com/jasmincordeiro" class="flex items-center">
+        <a href="https://github.com/jasmincordeiro" class="flex justify-between items-center">
           <svg  class="w-10 h-10 dark:text-white text-black " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
           </svg>
-
-          <span class="ml-2 dark:text-mypurple text-mypurple-dark font-semibold">github.com/JasminCordeiro</span>
+          <span class=" ml-2 dark:text-mypurple text-mypurple-dark font-semibold">github.com/JasminCordeiro</span>
         </a>
       </div>
     </div>

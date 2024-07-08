@@ -22,15 +22,15 @@ import { AsideComponent } from '../aside/aside.component';
 export class HomeComponent {
 
   skills:any[] = [
-    {type: 'html', label: 'HTML', rating: 'w-4/5'},
-    {type: 'css', label: 'CSS', rating: 'w-4/5'},
-    {type: 'javascript', label: 'JavaScript', rating: 'w-1/2'},
-    {type: 'angular', label: 'Angular', rating: 'w-1/2'},
-    {type: 'php', label: 'Php', rating: 'w-1/3'},
-    {type: 'java', label: 'Java', rating: 'w-1/3'},
-    {type: 'python', label: 'Python', rating: 'w-1/3'},
-    {type: 'tailwind', label: 'Tailwind', rating: 'w-1/2'},
-    {type: 'git', label: 'Git', rating: 'w-1/3'}
+    {type: 'html', label: 'HTML', progress: 'w-4/5'},
+    {type: 'css', label: 'CSS', progress: 'w-2/4'},
+    {type: 'javascript', label: 'JavaScript', progress: 'w-1/2'},
+    {type: 'angular', label: 'Angular', progress: 'w-1/2'},
+    {type: 'php', label: 'Php', progress: 'w-1/4'},
+    {type: 'java', label: 'Java', progress: 'w-1/4'},
+    {type: 'python', label: 'Python', progress: 'w-1/4'},
+    {type: 'tailwind', label: 'Tailwind', progress: 'w-1/2'},
+    {type: 'git', label: 'Git', progress: 'w-1/3'}
   ]
 
   aside:any[] =[

@@ -13,7 +13,7 @@ export class SkillsComponent   {
 
   @Input() type!: string;
   @Input() label!: string;
-  @Input() rating!: string;
+  @Input() progress!: string;
 
 
 }
