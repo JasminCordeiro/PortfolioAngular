@@ -1,0 +1,6 @@
+<div>
+  <a [attr.data-tooltip-target]="'tooltip-right' + id" data-tooltip-placement="right" class="flex w-3 h-3 my-2 md:mx-1 dark:bg-mygray2 bg-gray-200 rounded-full border border-mypurple" alt="aside" aria-label="none" [href]='href' ></a>
+  <div [id]="'tooltip-right' + id" role="tooltip" class="absolute z-10 invisible inline-block text-nowrap px-2 py-1 text-xs font-medium dark:text-white text-black bg-white dark:bg-mygray2 rounded-lg border border-mypurple shadow-sm opacity-0 tooltip ">
+  {{label}}
+  </div>
+</div>

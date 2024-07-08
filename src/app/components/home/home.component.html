@@ -1,34 +1,10 @@
 
-<!-- <app-header></app-header> -->
-
-
 <!-- header com indicador-->
   <aside class="fixed flex flex-col justify-center items-center h-full left-0 z-40 ">
-    <div>
-      <a data-tooltip-target="tooltip-right1" data-tooltip-placement="right" class="flex w-3 h-3 my-2 md:mx-1 dark:bg-mygray2 bg-gray-200 rounded-full border border-mypurple" href="#sobreMim"></a>
-      <div id="tooltip-right1" role="tooltip" class="absolute z-10 invisible inline-block text-nowrap px-2 py-1 text-xs font-medium dark:text-white text-black bg-white dark:bg-mygray2 rounded-lg border border-mypurple shadow-sm opacity-0 tooltip ">
-      Sobre mim
-      </div>
+    <div *ngFor="let item of aside; let i = index">
+      <app-aside [id]="i" [label]="item.label" [href]="item.href"></app-aside>
     </div>
-    <div>
-      <a data-tooltip-target="tooltip-right2" data-tooltip-placement="right" class="flex w-3 h-3 my-2 md:mx-1 dark:bg-mygray2 bg-gray-200 rounded-full border border-mypurple" href="#skills"></a>
-      <div id="tooltip-right2" role="tooltip" class="absolute z-10 invisible inline-block text-nowrap px-2 py-1 text-xs font-medium dark:text-white text-black bg-white dark:bg-mygray2 rounded-lg border border-mypurple  shadow-sm opacity-0 tooltip">
-        Skills
-      </div>
-    </div>
-    <div>
-      <a data-tooltip-target="tooltip-right3" data-tooltip-placement="right" class="flex w-3 h-3 my-2 md:mx-1 dark:bg-mygray2 bg-gray-200 rounded-full border border-mypurple" href="#projetos"></a>
-      <div id="tooltip-right3" role="tooltip" class="absolute z-10 invisible inline-block text-nowrap px-2 py-1 text-xs font-medium dark:text-white text-black bg-white dark:bg-mygray2 rounded-lg border border-mypurple shadow-sm opacity-0 tooltip">
-        Projetos
-      </div>
-    </div>
-    <div>
-      <a data-tooltip-target="tooltip-right4" data-tooltip-placement="right" class="flex w-3 h-3 my-2 md:mx-1 dark:bg-mygray2 bg-gray-200 rounded-full border border-mypurple" href="#contatos"></a>
-      <div id="tooltip-right4" role="tooltip" class="absolute z-10 invisible inline-block text-nowrap px-2 py-1 text-xs font-medium dark:text-white text-black bg-white dark:bg-mygray2 rounded-lg border border-mypurple shadow-sm opacity-0 tooltip">
-        Contatos
-      </div>
-    </div>
-</aside>
+  </aside>
 
 <main  id="sobreMim" class="font-sans flex flex-col gap-2 text-gray-800 dark:text-white sm:m-4">
   <app-theme-toggle class="flex justify-end "></app-theme-toggle>
@@ -55,17 +31,12 @@
   </div >
 </div>
 
-<h1 id="skills" class="text-3xl text-center font-bold">Skills</h1>
-<div class="p-4">
-<div class="grid grid-cols-3 gap-3 font-medium">
-  <div *ngFor="let skill of skills; let i = index">
-    <app-skills [id]="i" [type]="skill.type" [label]="skill.label" ></app-skills>
+  <h1 id="skills" class="text-3xl text-center font-bold">Skills</h1>
+  <div class="grid grid-cols-3 gap-3 font-medium p-4 ">
+    <div *ngFor="let skill of skills; let i = index">
+      <app-skills [id]="i" [type]="skill.type" [label]="skill.label" ></app-skills>
+    </div>
   </div>
-</div>
-</div>
-
-
-
 
   <app-items-carousel></app-items-carousel>
 
@@ -95,7 +66,6 @@
           <svg class="w-10 h-10 dark:text-white text-black " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
           </svg>
-
           <span class="ml-2 dark:text-mypurple text-mypurple-dark font-semibold">jasmincordeiro12&#64;gmail.com</span>
         </a>
       </div>
