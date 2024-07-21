@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { NgFor, NgOptimizedImage } from '@angular/common';
 import { CarouselComponent } from '../carousel/carousel.component';
@@ -8,14 +7,10 @@ import { ThemeToggleComponent } from '../../theme-toggle/theme-toggle.component'
 import { SkillsComponent } from '../skills/skills.component';
 import { AsideComponent } from '../aside/aside.component';
 
-
-
-
-
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent,FooterComponent,NgOptimizedImage,CarouselComponent,ItemsCarouselComponent,ThemeToggleComponent, SkillsComponent, NgFor,AsideComponent],
+  imports: [FooterComponent,NgOptimizedImage,CarouselComponent,ItemsCarouselComponent,ThemeToggleComponent, SkillsComponent, NgFor,AsideComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
