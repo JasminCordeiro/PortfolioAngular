@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
 import { NgFor, NgOptimizedImage } from '@angular/common';
 import { CarouselComponent } from '../carousel/carousel.component';
@@ -21,11 +21,13 @@ export class HomeComponent {
     {type: 'css', label: 'CSS', progress: 'w-2/4'},
     {type: 'javascript', label: 'JavaScript', progress: 'w-1/2'},
     {type: 'angular', label: 'Angular', progress: 'w-1/2'},
-    {type: 'php', label: 'Php', progress: 'w-1/4'},
-    {type: 'java', label: 'Java', progress: 'w-1/4'},
-    {type: 'python', label: 'Python', progress: 'w-1/4'},
+    //{type: 'php', label: 'Php', progress: 'w-1/4'},
+    //{type: 'java', label: 'Java', progress: 'w-1/4'},
+    //{type: 'python', label: 'Python', progress: 'w-1/4'},
     {type: 'tailwind', label: 'Tailwind', progress: 'w-1/2'},
-    {type: 'git', label: 'Git', progress: 'w-1/3'}
+    //{type: 'git', label: 'Git', progress: 'w-1/3'},
+    {type: 'csharp', label: 'C#', progress: 'w-1/2'},
+
   ]
 
   aside:any[] =[
@@ -34,5 +36,12 @@ export class HomeComponent {
     {label: 'Projetos',  href: '#projetos'},
     {label: 'Contatos',  href: '#contatos'},
   ]
+
+  title = 'Meu Projeto Angular';
+  accessCount: number = 0;
+
+  constructor() {}
+
+
 
 }

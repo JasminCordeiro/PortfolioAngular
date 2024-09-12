@@ -13,5 +13,9 @@ export class AsideComponent {
   @Input() label!: string;
   @Input() href!: string;
 
+  exitTime:  Date;
 
+  constructor(){
+    this.exitTime = new Date();
+  }
 }

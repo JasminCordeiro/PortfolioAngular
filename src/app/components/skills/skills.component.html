@@ -1,4 +1,4 @@
-<a [class]="'flex justify-center items-center flex-col p-4 bg-white dark:bg-mygray2 bg-gray-100 border dark:border-mygray3 rounded-lg shadow  bg-mygray2 transition-transform duration-500 transform hover:scale-90 hover:border-mypurple dark:hover:border-mypurple'">
+<a [class]="'flex justify-center items-center flex-col p-6 bg-white dark:bg-mygray2 bg-gray-100 border dark:border-mygray3 rounded-lg shadow  bg-mygray2 transition-transform duration-500 transform hover:scale-90 hover:border-mypurple dark:hover:border-mypurple'">
   <h5 class="mb-2 text-center  tracking-tight  dark:text-white text-black ">{{label}}</h5>
   <img *ngIf="type == 'html'" src="../../../assets/vectors/html.svg" alt="">
   <img *ngIf="type == 'css'" src="../../../assets/vectors/css.svg" alt="">
@@ -9,7 +9,8 @@
   <img *ngIf="type == 'python'" src="../../../assets/vectors/python.svg" alt="">
   <img *ngIf="type == 'tailwind'" src="../../../assets/vectors/tailwind.svg" alt="">
   <img *ngIf="type == 'git'" src="../../../assets/vectors/git.svg" alt="">
-  <div class="m-1 md:m-4 md:w-40 w-10 dark:bg-mygray3 bg-gray-300 h-1.5 mb-4 rounded-full">
-    <div [class]="'bg-mypurple-dark h-1.5 rounded rounded-full ' + progress"></div>
-  </div>
+  <img *ngIf="type == 'csharp'" src="../../../assets/vectors/csharp.svg" alt="" class="p-0 m-0" >
+  <!-- <div class="m-1 md:m-4 md:w-40 w-10 dark:bg-mygray3 bg-gray-300 h-1.5 mb-4 rounded-full">
+     <div [class]="'bg-mypurple-dark h-1.5 rounded rounded-full ' + progress"></div>
+  </div> -->
 </a>

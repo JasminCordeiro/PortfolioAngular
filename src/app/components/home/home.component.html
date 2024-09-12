@@ -6,11 +6,12 @@
     </div>
   </aside>
 
+
 <main  id="sobreMim" class="font-sans flex flex-col gap-2 text-gray-800 dark:text-white sm:m-4">
   <app-theme-toggle class="flex justify-end "></app-theme-toggle>
   <div  class="grid grid-cols-1 sm:grid-cols-2 p-4 md:pb-16 md:pt-12">
     <section class="flex justify-center items-center">
-        <img  Src="./assets/file.jpg" class=" object-contain rounded-full w-56 md:w-80 mb-2" alt="..."  >
+        <img  Src="./assets/IMG_1465.JPEG" class=" object-contain rounded-full w-52 md:w-80 mb-2" alt="..."  >
     </section>
 
   <div class="flex justify-start items-center">
@@ -29,9 +30,9 @@
 </div>
 
   <h1 id="skills" class="text-3xl text-center font-bold">Skills</h1>
-  <div class="grid grid-cols-3 gap-3 font-medium p-4">
+  <div class="grid md:grid-cols-6 gap-6 sm:grid-cols-3 font-medium p-8">
     <div *ngFor="let skill of skills; let i = index">
-      <app-skills [id]="i" [type]="skill.type" [label]="skill.label" [progress]="skill.progress"></app-skills>
+      <app-skills [id]="i" [type]="skill.type" ></app-skills>
     </div>
   </div>
 
@@ -39,10 +40,10 @@
 
   <h1 id="contatos" class="flex justify-center text-3xl font-bold pt-5">Contatos</h1>
 
-<div class="flex flex-col md:flex-row justify-between  ">
+<div class="flex flex-col md:flex-row justify-between ">
 
-  <div class="flex justify-center items-center text-center md:w-1/3 ">
-    <div class="flex flex-row justify-between items-center border dark:border-mygray3 shadow dark:bg-mybg bg-gray-100 rounded-lg py-1 px-1  ">
+  <div class="flex justify-center items-center text-center  md:w-1/3 ">
+    <div class="flex flex-row justify-between items-center border dark:border-mygray3 shadow dark:bg-mybg bg-white rounded-lg py-1 px-1  ">
       <div class="">
         <a href="https://br.linkedin.com/in/jasmincordeiro" class="flex items-center">
           <svg class="w-10 h-10 dark:text-white text-black  mb-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -57,7 +58,7 @@
   </div>
 
   <div class="flex justify-center items-center text-center  md:w-1/3 my-4">
-    <div class="flex flex-row justify-between items-center border dark:border-mygray3 shadow dark:bg-mybg bg-gray-100 rounded-lg py-2 px-2">
+    <div class="flex flex-row justify-between items-center border dark:border-mygray3 shadow dark:bg-mybg bg-white rounded-lg py-2 px-2">
       <div class="">
         <a href="mailto:jasmincordeiro12@gmail.com" class="flex items-center ">
           <svg class="w-10 h-10 dark:text-white text-black " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -70,7 +71,7 @@
   </div>
 
   <div class="flex justify-center items-center text-center w-full md:w-1/3">
-    <div class="flex flex-row justify-between items-center border dark:border-mygray3 shadow dark:bg-mybg bg-gray-100 rounded-lg py-2 px-4  ">
+    <div class="flex flex-row justify-between items-center border dark:border-mygray3 shadow dark:bg-mybg bg-white rounded-lg py-2 px-4  ">
       <div class="w-full">
         <a href="https://github.com/jasmincordeiro" class="flex justify-between items-center">
           <svg  class="w-10 h-10 dark:text-white text-black " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
