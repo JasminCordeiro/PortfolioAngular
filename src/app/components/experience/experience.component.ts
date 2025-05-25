@@ -21,7 +21,7 @@ interface Experience {
     <div class="flex flex-col space-y-8">
       <div *ngFor="let exp of experiences; let last = last" class="relative flex items-start group">
         <!-- Linha vertical (não mostrar no último item) -->
-        <div *ngIf="!last" class="absolute left-9 top-14 h-full w-0.5 bg-gray-200 dark:bg-gray-700"></div>
+        <div *ngIf="!last" class="absolute left-8 top-20 h-[calc(100%-5rem)] w-0.5 bg-gray-200 dark:bg-gray-700"></div>
         
         <!-- Logo da empresa -->
         <div class="flex-shrink-0 w-18 h-18">
@@ -30,7 +30,7 @@ interface Experience {
 
         <!-- Conteúdo -->
         <div class="ml-6 flex-grow">
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between space-x-4">
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">{{exp.company}}</h3>
             <span class="text-sm text-gray-500 dark:text-gray-400">{{exp.period.start}} - {{exp.period.end}}</span>
           </div>
