@@ -3,11 +3,31 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+/* Transições suaves para mudanças de tema */
+* {
+  transition: background-color 0.8s ease-in-out, 
+              color 0.8s ease-in-out, 
+              border-color 0.8s ease-in-out,
+              opacity 0.8s ease-in-out,
+              transform 0.8s ease-in-out;
+}
 
-body{
+/* Transições específicas para cards */
+.card-transition {
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.card-hover {
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+body {
   zoom: 120%;
 }
 
-
 html, body { height: 100%; }
-body { margin: 0;}
+body { margin: 0; }

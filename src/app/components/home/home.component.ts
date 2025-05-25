@@ -6,11 +6,24 @@ import { ItemsCarouselComponent } from '../items-carousel/items-carousel.compone
 import { ThemeToggleComponent } from '../../theme-toggle/theme-toggle.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { AsideComponent } from '../aside/aside.component';
+import { SocialIconComponent } from '../shared/social-icon/social-icon.component';
+import { ExperienceComponent } from '../experience/experience.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FooterComponent,NgOptimizedImage,CarouselComponent,ItemsCarouselComponent,ThemeToggleComponent, SkillsComponent, NgFor,AsideComponent],
+  imports: [
+    FooterComponent,
+    NgOptimizedImage,
+    CarouselComponent,
+    ItemsCarouselComponent,
+    ThemeToggleComponent,
+    SkillsComponent,
+    NgFor,
+    AsideComponent,
+    SocialIconComponent,
+    ExperienceComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -33,6 +46,7 @@ export class HomeComponent {
   aside:any[] =[
     {label: 'Sobre mim', href: '#sobreMim'},
     {label: 'Skills',    href: '#skills'},
+    {label: 'Experiência', href: '#experience'},
     {label: 'Projetos',  href: '#projetos'},
     {label: 'Contatos',  href: '#contatos'},
   ]

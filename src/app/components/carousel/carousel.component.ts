@@ -1,4 +1,6 @@
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-carousel',
@@ -7,66 +9,69 @@ import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, Vie
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss'
 })
-
-export class CarouselComponent implements OnInit, AfterViewInit {
-
+export class CarouselComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('prevButton') prevButtonRef!: ElementRef<HTMLButtonElement>;
   @ViewChild('nextButton') nextButtonRef!: ElementRef<HTMLButtonElement>;
   @ViewChildren('carouselItem') carouselItemsRefs!: QueryList<ElementRef<HTMLDivElement>>;
 
   private currentIndex = 0;
   private itemsPerPage = 1;
+  private destroy$ = new Subject<void>();
 
-  constructor() { }
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {
-    // Outras inicializações aqui...
+    this.setupResponsiveLayout();
   }
 
   ngAfterViewInit(): void {
-    this.setupCarousel();
-    window.addEventListener('resize', this.setupCarousel.bind(this));
+    this.updateVisibility();
   }
 
-  setupCarousel(): void {
-    const prevButton = this.prevButtonRef.nativeElement;
-    const nextButton = this.nextButtonRef.nativeElement;
-
-    prevButton.addEventListener('click', () => {
-      if (this.currentIndex > 0) {
-        this.currentIndex -= this.itemsPerPage;
-        this.updateVisibility();
-      }
-    });
-
-    nextButton.addEventListener('click', () => {
-      const carouselItems = this.carouselItemsRefs.toArray(); // Corrigido: Convertido para array
-      if (this.currentIndex < carouselItems.length - this.itemsPerPage) {
-        this.currentIndex += this.itemsPerPage;
-        this.updateVisibility();
-      }
-    });
-
-    this.updateItemsPerPage(); // Corrigido: Chamada inicial para definir o número correto de itens por página
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
-  updateItemsPerPage(): void {
-    if (window.innerWidth <= 768) { // Para telas menores ou iguais a 768 pixels de largura (mobile)
-      this.itemsPerPage = 1; // Apenas um item por página no mobile
-    } else {
-      this.itemsPerPage = 1; // Três itens por página para telas maiores que 768 pixels de largura (desktop)
+
+  private setupResponsiveLayout(): void {
+    this.breakpointObserver
+      .observe([Breakpoints.HandsetPortrait, Breakpoints.TabletPortrait])
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(result => {
+        this.itemsPerPage = result.matches ? 1 : 3;
+        this.updateVisibility();
+      });
+  }
+
+  next(): void {
+    const items = this.carouselItemsRefs.toArray();
+    const maxIndex = items.length - this.itemsPerPage;
+    this.currentIndex = Math.min(this.currentIndex + 1, maxIndex);
+    this.updateVisibility();
+  }
+
+  previous(): void {
+    this.currentIndex = Math.max(this.currentIndex - 1, 0);
+    this.updateVisibility();
+  }
+
+  private updateVisibility(): void {
+    if (!this.carouselItemsRefs) return;
+
+    const items = this.carouselItemsRefs.toArray();
+    items.forEach((item, index) => {
+      const isVisible = index >= this.currentIndex && 
+                       index < this.currentIndex + this.itemsPerPage;
+      item.nativeElement.style.display = isVisible ? 'block' : 'none';
+    });
+
+    // Atualizar estado dos botões
+    if (this.prevButtonRef) {
+      this.prevButtonRef.nativeElement.disabled = this.currentIndex === 0;
     }
-    this.updateVisibility(); // Atualiza a visibilidade dos itens após a alteração do número de itens por página
-  }
-
-  updateVisibility(): void {
-    const carouselItems = this.carouselItemsRefs.toArray(); // Corrigido: Convertido para array
-    carouselItems.forEach((item: ElementRef<HTMLDivElement>, index: number) => {
-      // Calcule o índice inicial e final dos itens a serem exibidos
-      const startIndex = this.currentIndex;
-      const endIndex = Math.min(startIndex + this.itemsPerPage, carouselItems.length);
-
-      // Defina o estilo de exibição com base no índice atual
-      item.nativeElement.style.display = index >= startIndex && index < endIndex ? 'block' : 'none';
-    });
+    if (this.nextButtonRef) {
+      this.nextButtonRef.nativeElement.disabled = 
+        this.currentIndex >= items.length - this.itemsPerPage;
+    }
   }
 }

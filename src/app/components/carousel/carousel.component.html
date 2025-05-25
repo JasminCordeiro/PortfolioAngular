@@ -1,36 +1,37 @@
-<div class=" text-center">
-  <!-- Conteúdo do carrossel -->
-  <div class="flex flex-col md:flex-row mt-4 justify-center items-center w-1/2 md:w-auto">
-
-    <div #carouselItem class="">
-      <img class="flex justify-center rounded-lg " width="336" Src="./assets/PC-yourlinkhubdark.png" alt="" />
-    </div>
-    <div #carouselItem class="">
-      <img class="flex justify-center md:w-102 md:h-72 w-29 h-40 rounded-lg " Src="./assets/yourlinkhubdark.png" alt="" />
-    </div>
-    <div #carouselItem class="">
-      <img class="flex justify-center md:w-102 md:h-72 w-29 h-40 rounded-lg " Src="./assets/yourlinkhublight.png" alt="" />
-    </div>
-
-    <div #carouselItem class="">
-      <img class="flex justify-center md:w-50 md:h-30 rounded-lg " Src="./assets/PC-yourlinkhublight.png" alt="" />
-    </div>
-
-
-
+<!-- Carousel wrapper -->
+<div class="relative w-full">
+  <!-- Carousel container -->
+  <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+    <ng-content></ng-content>
   </div>
-
-  <!-- Botões de navegação -->
-  <div class="flex justify-between items-center">
-    <button #prevButton class="flex justify-center items-center w-8  text-white rounded-lg">
-      <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
+  
+  <!-- Previous button -->
+  <button
+    #prevButton
+    type="button"
+    class="absolute left-0 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    (click)="previous()"
+    [attr.aria-label]="'Previous slide'"
+  >
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+      <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
       </svg>
-    </button>
-    <button #nextButton class="flex justify-center items-center w-8  text-white rounded-lg">
-      <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+    </span>
+  </button>
+  
+  <!-- Next button -->
+  <button
+    #nextButton
+    type="button"
+    class="absolute right-0 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    (click)="next()"
+    [attr.aria-label]="'Next slide'"
+  >
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+      <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
       </svg>
-    </button>
-  </div>
+    </span>
+  </button>
 </div>
