@@ -63,8 +63,19 @@ export class ExperienceComponent {
       company: 'Asaas',
       logo: './assets/companies/asaas.jpeg',
       period: {
-        start: '09/2024',
+        start: '07/2025',
         end: 'Atual'
+      },
+      role: 'Desenvolvedora Backend Junior',
+      type: 'CLT',
+      technologies: ['C#', 'Node.js','Python',  'RabbitMQ', 'Docker','Azure']
+    },
+    {
+      company: 'Asaas',
+      logo: './assets/companies/asaas.jpeg',
+      period: {
+        start: '09/2024',
+        end: '06/2025'
       },
       role: 'Desenvolvedora Backend',
       type: 'Estágio',
