@@ -30,17 +30,15 @@ import { ExperienceComponent } from '../experience/experience.component';
 export class HomeComponent {
 
   skills:any[] = [
-    {type: 'html', label: 'HTML', progress: 'w-4/5'},
-    {type: 'css', label: 'CSS', progress: 'w-2/4'},
-    {type: 'javascript', label: 'JavaScript', progress: 'w-1/2'},
-    {type: 'angular', label: 'Angular', progress: 'w-1/2'},
-    //{type: 'php', label: 'Php', progress: 'w-1/4'},
-    //{type: 'java', label: 'Java', progress: 'w-1/4'},
-    //{type: 'python', label: 'Python', progress: 'w-1/4'},
-    {type: 'tailwind', label: 'Tailwind', progress: 'w-1/2'},
-    //{type: 'git', label: 'Git', progress: 'w-1/3'},
-    {type: 'csharp', label: 'C#', progress: 'w-1/2'},
-
+    {type: 'html', label: 'HTML'},
+    {type: 'css', label: 'CSS'},
+    {type: 'javascript', label: 'JavaScript'},
+    {type: 'angular', label: 'Angular'},
+    {type: 'csharp', label: 'C#'},
+    {type: 'python', label: 'Python'},
+    {type: 'tailwind', label: 'Tailwind'},
+    {type: 'git', label: 'Git'},
+    {type: 'docker', label: 'Docker'},
   ]
 
   aside:any[] =[

@@ -1,11 +1,11 @@
-import { NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { TechIconComponent, TechType } from '../../shared/tech-icon/tech-icon.component';
 
 @Component({
   selector: 'app-item',
   standalone: true,
-  imports: [NgIf, TechIconComponent],
+  imports: [CommonModule, TechIconComponent],
   templateUrl: './item.component.html',
   styleUrl: './item.component.scss'
 })
