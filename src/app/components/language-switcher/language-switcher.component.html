@@ -1,0 +1,26 @@
+<div class="relative inline-flex items-center rounded-full bg-gray-200/70 dark:bg-mygray2/80 p-1 shadow-inner border border-gray-300 dark:border-mygray3">
+  <span
+    class="absolute top-1 bottom-1 w-[calc(50%-0.25rem)] rounded-full bg-mypurple-dark transition-transform duration-300 ease-out"
+    [ngClass]="currentLanguage === 'en' ? 'translate-x-full' : 'translate-x-0'"
+  ></span>
+
+  <button
+    type="button"
+    class="relative z-10 min-w-14 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide transition-colors duration-300"
+    [ngClass]="currentLanguage === 'pt' ? 'text-white' : 'text-gray-700 dark:text-gray-300'"
+    (click)="setLanguage('pt')"
+    aria-label="Alterar idioma para portugues"
+  >
+    PT
+  </button>
+
+  <button
+    type="button"
+    class="relative z-10 min-w-14 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide transition-colors duration-300"
+    [ngClass]="currentLanguage === 'en' ? 'text-white' : 'text-gray-700 dark:text-gray-300'"
+    (click)="setLanguage('en')"
+    aria-label="Change language to English"
+  >
+    EN
+  </button>
+</div>

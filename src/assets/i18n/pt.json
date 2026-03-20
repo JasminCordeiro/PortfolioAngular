@@ -1,0 +1,52 @@
+{
+  "NAV": {
+    "ABOUT": "Sobre",
+    "SKILLS": "Skills",
+    "EXPERIENCE": "Experiência",
+    "EDUCATION": "Formação",
+    "PROJECTS": "Projetos",
+    "CONTACT": "Contato"
+  },
+  "SECTIONS": {
+    "SKILLS": "Habilidades Técnicas",
+    "EXPERIENCE": "Experiência Profissional",
+    "EDUCATION": "Formação",
+    "CONTACT": "Contato"
+  },
+  "HERO": {
+    "PHOTO_ALT": "Foto de Jasmin Cordeiro",
+    "GREETING": "Olá, eu sou",
+    "ROLE": "Backend Engineer | Automação & Sistemas Distribuídos",
+    "HEADLINE": "Atuo no Asaas desenvolvendo soluções backend para automação de processos e orquestração de fluxos financeiros em larga escala. Trabalho com microserviços de alta disponibilidade utilizando C# e Node.js, garantindo eficiência, escalabilidade e resiliência em operações críticas.",
+    "SUMMARY": "Graduanda em Sistemas de Informação pela UFOP, com foco em desenvolvimento de sistemas e automação de processos. Experiência na construção de APIs e aplicações web utilizando JavaScript, Angular e PHP, além de atuação com arquiteturas orientadas a eventos, RPA/Bots e monitoramento de sistemas. Foco em construir soluções eficientes, escaláveis e orientadas a resolver problemas reais.",
+    "RESUME": "Download CV"
+  },
+  "EXPERIENCE": {
+    "ASAAS_JR": {
+      "ROLE": "Desenvolvedora Backend Junior",
+      "TYPE": "Tempo integral",
+      "SUMMARY": "Desenvolvimento de soluções backend para automação de processos financeiros em larga escala. Atuação na construção de microserviços e bots de coleta de dados (RPA/Web Scraping), garantindo alta disponibilidade e resiliência.\n\nExperiência com C# (.NET), Node.js e Python na criação de APIs REST e workers assíncronos. Uso de RabbitMQ para orquestração de fluxos distribuídos e implementação de pipelines CI/CD com Azure Pipelines e GitHub Actions.\n\nForte atuação em observabilidade com Datadog, Elasticsearch e Kibana, focando na análise de logs, monitoramento e resolução de falhas em produção."
+    },
+    "ASAAS_INTERN": {
+      "ROLE": "Estagiária de Desenvolvimento Backend",
+      "TYPE": "Estágio",
+      "SUMMARY": "Desenvolvimento e manutenção de APIs e workers voltados ao processamento de operações financeiras. Apoio na construção de sistemas assíncronos com filas e mensageria, contribuindo para automação de rotinas críticas e melhoria da eficiência operacional."
+    },
+    "SICOOB": {
+      "ROLE": "Suporte Técnico",
+      "TYPE": "Estágio",
+      "SUMMARY": "Atuação no suporte a sistemas e usuários internos, com foco em diagnóstico de incidentes e melhoria de processos. Experiência com práticas de ITSM, suporte à infraestrutura e participação em times ágeis utilizando Scrum."
+    },
+    "UFOP": {
+    "ROLE": "Bacharelado em Sistemas de Informação",
+    "TYPE": "2022 - Atual",
+    "SUMMARY": "Formação multidisciplinar com base em Ciência da Computação, Sistemas de Informação e Matemática, aliada a conhecimentos em Administração e Economia."
+  }
+  },
+  "CONTACT": {
+    "EMAIL": "E-mail"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Copyright © 2026 Jasmin Cordeiro. Todos os direitos reservados."
+  }
+}

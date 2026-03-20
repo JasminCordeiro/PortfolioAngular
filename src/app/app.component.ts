@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
+import { LanguageService } from './services';
 
 
 
@@ -13,8 +14,10 @@ import { initFlowbite } from 'flowbite';
 })
 export class AppComponent implements OnInit{
   title = 'Portfolio';
+  private readonly languageService = inject(LanguageService);
 
   ngOnInit(): void {
+      this.languageService.initLanguage();
       initFlowbite();
   }
 }

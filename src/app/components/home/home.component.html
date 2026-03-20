@@ -1,25 +1,29 @@
 <!-- header com indicador-->
   <aside class="fixed flex flex-col justify-center items-center h-full left-0 z-40 ">
     <div *ngFor="let item of aside; let i = index">
-      <app-aside [id]="i" [label]="item.label" [href]="item.href"></app-aside>
+      <app-aside [id]="i" [label]="item.labelKey | translate" [href]="item.href"></app-aside>
     </div>
   </aside>
 
 
 <main  id="sobreMim" class="font-sans flex flex-col gap-2 text-gray-800 dark:text-white sm:m-4">
-  <app-theme-toggle class="flex justify-end "></app-theme-toggle>
+  <div class="flex justify-end items-center gap-2 px-4 pt-2">
+    <app-language-switcher></app-language-switcher>
+    <app-theme-toggle></app-theme-toggle>
+  </div>
   <div  class="grid grid-cols-1 sm:grid-cols-2 p-4 md:pb-16 md:pt-12">
     <section class="flex justify-center items-center">
-        <img  Src="./assets/IMG_1465.JPEG" class=" object-contain rounded-full w-52 md:w-80 mb-2" alt="..."  >
+        <img  Src="./assets/IMG_1465.JPEG" class=" object-contain rounded-full w-52 md:w-80 mb-2" [alt]="'HERO.PHOTO_ALT' | translate"  >
     </section>
 
   <div class="flex justify-start items-center">
     <div class="text-center">
-        <h1  class="text-4xl font-bold py-1 "> Olá, sou a <b class="font-bold text-mypurple-dark">Jasmin Cordeiro</b></h1>
-        <h3 class="text-center text-sm pb-1">Fullstack Developer Junior</h3>
-        <p class="p-3 text-justify">Desenvolvedora fullstack apaixonada por criar soluções inovadoras. Estou cursando Sistemas de Informação, e tenho experiência em HTML,CSS, JS, Angular, Php  e muito mais. Estou sempre em busca de desafios estimulantes e pronta para contribuir em projetos empolgantes. Vamos criar juntos o futuro da tecnologia!</p>
+        <h1  class="text-4xl font-bold py-1 whitespace-normal break-words">{{ 'HERO.GREETING' | translate }} <b class="font-bold text-mypurple-dark">Jasmin Cordeiro</b></h1>
+        <h3 class="text-center text-sm pb-1">{{ 'HERO.ROLE' | translate }}</h3>
+        <p class="p-3 text-justify whitespace-normal break-words">{{ 'HERO.HEADLINE' | translate }}</p>
+        <p class="px-3 pb-2 text-justify text-sm text-gray-600 dark:text-gray-300 whitespace-normal break-words">{{ 'HERO.SUMMARY' | translate }}</p>
         <a target="_blank" href="./assets/Jasmin-Cordeiro.pdf" download class="m-3 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-mypurple-dark rounded-lg hover:bg-mypurple focus:ring-2 focus:outline-none focus:ring-mygray ">
-          <b class="text-white">Currículo</b>
+          <b class="text-white">{{ 'HERO.RESUME' | translate }}</b>
           <svg class="m-1 w-4 h-4 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m14-4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
           </svg>
@@ -28,7 +32,7 @@
   </div >
 </div>
 
-  <h1 id="skills" class="text-3xl text-center font-bold mb-12">Skills</h1>
+  <h1 id="skills" class="text-3xl text-center font-bold mb-12">{{ 'SECTIONS.SKILLS' | translate }}</h1>
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
       <div *ngFor="let skill of skills; let i = index">
@@ -38,19 +42,49 @@
   </div>
 
   <!-- Experiência -->
-  <h1 id="experience" class="text-3xl text-center font-bold mb-8">Experiência</h1>
+  <h1 id="experience" class="text-3xl text-center font-bold mb-8">{{ 'SECTIONS.EXPERIENCE' | translate }}</h1>
   <div class="max-w-3xl mx-auto px-4 mb-16">
     <app-experience></app-experience>
   </div>
 
+<h1 id="education" class="text-3xl text-center font-bold mb-8">
+  {{ 'SECTIONS.EDUCATION' | translate }}
+</h1>
+
+<section class="max-w-3xl mx-auto px-4 mb-16">
+  <div class="bg-white dark:bg-mygray2 border dark:border-mygray3 rounded-xl shadow-lg p-6">
+    <div class="flex flex-wrap justify-between gap-2">
+      <h3 class="text-xl font-bold text-gray-900 dark:text-white whitespace-normal break-words">
+        {{ 'EDUCATION.UFOP.TITLE' | translate }}
+      </h3>
+      <span class="text-sm text-gray-500 dark:text-gray-400">
+        {{ 'EDUCATION.UFOP.PERIOD' | translate }}
+      </span>
+    </div>
+
+    <p class="text-mypurple dark:text-mypurple font-semibold mt-2">
+      {{ 'EDUCATION.UFOP.PROGRAM' | translate }}
+    </p>
+
+    <ul class="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-300">
+      <li class="whitespace-normal break-words">
+        {{ 'EDUCATION.UFOP.COURSEWORK' | translate }}
+      </li>
+      <li class="whitespace-normal break-words">
+        {{ 'EDUCATION.UFOP.TCC' | translate }}
+      </li>
+    </ul>
+  </div>
+</section>
+
   <app-items-carousel></app-items-carousel>
 
-  <h1 id="contatos" class="text-3xl font-bold text-center mb-12">Contatos</h1>
+  <h1 id="contatos" class="text-3xl font-bold text-center mb-12">{{ 'SECTIONS.CONTACT' | translate }}</h1>
 
   <!-- Seção de contatos redesenhada -->
   <div class="max-w-4xl mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      
+
       <!-- LinkedIn -->
       <div class="group">
         <div class="bg-white dark:bg-mygray2 border dark:border-mygray3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 hover:scale-105 card-transition">
@@ -65,7 +99,8 @@
             </div>
             <div class="flex-1 min-w-0">
               <h3 class="text-sm font-semibold text-gray-900 dark:text-white">LinkedIn</h3>
-              <a href="https://br.linkedin.com/in/jasmincordeiro" 
+              <a href="https://br.linkedin.com/in/jasmincordeiro"
+                 target="_blank"
                  class="text-sm text-gray-600 dark:text-gray-300 hover:text-mypurple transition-colors duration-200 break-all">
                 /in/jasmincordeiro
               </a>
@@ -86,8 +121,8 @@
               </div>
             </div>
             <div class="flex-1 min-w-0">
-              <h3 class="text-sm font-semibold text-gray-900 dark:text-white">Email</h3>
-              <a href="mailto:jasmincordeiro.dev@gmail.com" 
+              <h3 class="text-sm font-semibold text-gray-900 dark:text-white">{{ 'CONTACT.EMAIL' | translate }}</h3>
+              <a href="mailto:jasmincordeiro.dev@gmail.com"
                  class="text-sm text-gray-600 dark:text-gray-300 hover:text-mypurple transition-colors duration-200 block leading-tight">
                 <span class="block">jasmincordeiro.dev</span>
                 <span class="block">&#64;gmail.com</span>
@@ -110,7 +145,8 @@
             </div>
             <div class="flex-1 min-w-0">
               <h3 class="text-sm font-semibold text-gray-900 dark:text-white">GitHub</h3>
-              <a href="https://github.com/jasmincordeiro" 
+              <a href="https://github.com/jasmincordeiro"
+                 target="_blank"
                  class="text-sm text-gray-600 dark:text-gray-300 hover:text-mypurple transition-colors duration-200 break-all">
                 /JasminCordeiro
               </a>

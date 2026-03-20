@@ -1,0 +1,52 @@
+{
+  "NAV": {
+    "ABOUT": "About",
+    "SKILLS": "Skills",
+    "EXPERIENCE": "Experience",
+    "EDUCATION": "Education",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact"
+  },
+  "SECTIONS": {
+    "SKILLS": "Technical Skills",
+    "EXPERIENCE": "Professional Experience",
+    "EDUCATION": "Education",
+    "CONTACT": "Contact"
+  },
+  "HERO": {
+    "PHOTO_ALT": "Photo of Jasmin Cordeiro",
+    "GREETING": "Hi, I'm",
+    "ROLE": "Backend Engineer | Automation & Distributed Systems",
+    "HEADLINE": "At Asaas, I develop backend solutions focused on process automation and large-scale financial workflow orchestration. I work with high-availability microservices using C# and Node.js, ensuring efficiency, scalability, and resilience in critical operations.",
+    "SUMMARY": "Information Systems undergraduate at UFOP, focused on software development and process automation. Experience building APIs and web applications using JavaScript, Angular, and PHP, along with hands-on work with event-driven architectures, RPA/Bots, and system monitoring. Focused on building efficient, scalable solutions that solve real-world problems.",
+    "RESUME": "Download CV"
+  },
+  "EXPERIENCE": {
+    "ASAAS_JR": {
+      "ROLE": "Junior Backend Developer",
+      "TYPE": "Full-time",
+      "SUMMARY": "Development of backend solutions for large-scale financial process automation. Responsible for building microservices and data collection bots (RPA/Web Scraping), ensuring high availability and system resilience.\n\nExperience with C# (.NET), Node.js, and Python in building REST APIs and asynchronous workers. Use of RabbitMQ to orchestrate distributed workflows and implementation of CI/CD pipelines with Azure Pipelines and GitHub Actions.\n\nStrong focus on observability using Datadog, Elasticsearch, and Kibana, working with log analysis, monitoring, and production issue resolution."
+    },
+    "ASAAS_INTERN": {
+      "ROLE": "Backend Developer Intern",
+      "TYPE": "Internship",
+      "SUMMARY": "Development and maintenance of APIs and workers for financial operations processing. Supported the creation of asynchronous systems using queues and messaging, contributing to automation of critical routines and improved operational efficiency."
+    },
+    "SICOOB": {
+      "ROLE": "Technical Support",
+      "TYPE": "Internship",
+      "SUMMARY": "Provided support for internal systems and users, focusing on incident diagnosis and process improvement. Experience with ITSM practices, infrastructure support, and participation in agile teams using Scrum."
+    },
+    "UFOP": {
+      "ROLE": "Bachelor's Degree in Information Systems",
+      "TYPE": "2022 - Present",
+      "SUMMARY": "Multidisciplinary education combining Computer Science, Information Systems, and Mathematics, along with business-oriented subjects such as Administration and Economics."
+    }
+  },
+  "CONTACT": {
+    "EMAIL": "Email"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Copyright © 2026 Jasmin Cordeiro. All rights reserved."
+  }
+}

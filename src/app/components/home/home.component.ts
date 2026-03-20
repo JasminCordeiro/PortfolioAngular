@@ -1,28 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
-import { NgFor, NgOptimizedImage } from '@angular/common';
-import { CarouselComponent } from '../carousel/carousel.component';
+import { NgFor } from '@angular/common';
 import { ItemsCarouselComponent } from '../items-carousel/items-carousel.component';
 import { ThemeToggleComponent } from '../../theme-toggle/theme-toggle.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { AsideComponent } from '../aside/aside.component';
-import { SocialIconComponent } from '../shared/social-icon/social-icon.component';
 import { ExperienceComponent } from '../experience/experience.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     FooterComponent,
-    NgOptimizedImage,
-    CarouselComponent,
     ItemsCarouselComponent,
     ThemeToggleComponent,
     SkillsComponent,
     NgFor,
     AsideComponent,
-    SocialIconComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    TranslateModule,
+    LanguageSwitcherComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -42,11 +41,12 @@ export class HomeComponent {
   ]
 
   aside:any[] =[
-    {label: 'Sobre mim', href: '#sobreMim'},
-    {label: 'Skills',    href: '#skills'},
-    {label: 'Experiência', href: '#experience'},
-    {label: 'Projetos',  href: '#projetos'},
-    {label: 'Contatos',  href: '#contatos'},
+    {labelKey: 'NAV.ABOUT', href: '#sobreMim'},
+    {labelKey: 'NAV.SKILLS', href: '#skills'},
+    {labelKey: 'NAV.EXPERIENCE', href: '#experience'},
+    {labelKey: 'NAV.EDUCATION', href: '#education'},
+    {labelKey: 'NAV.PROJECTS', href: '#projetos'},
+    {labelKey: 'NAV.CONTACT', href: '#contatos'},
   ]
 
   title = 'Meu Projeto Angular';
